@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Preview Design</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #a89f9f;
+        margin: 0;
+        padding: 0;
+      }
+      .main-img {
+        width: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      }
+
+      .container {
+        max-width: 60%;
+        margin: 20px auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+
+      .pro-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .pro-img {
+        width: 80px;
+        height: auto;
+        border-radius: 5px;
+        object-fit: cover;
+        margin: 0 10px;
+        cursor: pointer;
+        border: 1px solid black;
+        transition: transform 0.3s ease;
+      }
+
+      .pro-img:hover {
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Samsung Galaxy S24 Ultra 5G</h1>
+      <img src="./main-img.jpg" class="main-img" />
+
+      <div class="pro-container">
+        <img
+          src="main-img.jpg"
+          class="pro-img"
+          onclick="changeImage('main-img.jpg')"
+        />
+        <img
+          src="imgOne.jpg"
+          class="pro-img"
+          onclick="changeImage('imgOne.jpg')"
+        />
+        <img
+          src="imgTwo.jpg"
+          class="pro-img"
+          onclick="changeImage('imgTwo.jpg')"
+        />
+        <img
+          src="imgThree.jpg"
+          class="pro-img"
+          onclick="changeImage('imgThree.jpg')"
+        />
+        <img
+          src="imgFour.jpg"
+          class="pro-img"
+          onclick="changeImage('imgFour.jpg')"
+        />
+      </div>
+    </div>
+
+    <script>
+      function changeImage(imageName) {
+        const mainImage = document.querySelector(".main-img");
+
+        mainImage.src = imageName;
+      }
+    </script>
+  </body>
+</html>
